@@ -1,0 +1,308 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  </head>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.2.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<style>
+  footer{
+            font-size:30px ;
+            font-family:algerian, courier;
+            background-color:darkgray;
+            text-align: center;
+            color:purple;
+        }
+    li.lead{
+        font-family: 'Times New Roman', Times, serif;
+        color:purple;
+        font-weight:bold;
+        text-align: center;
+    }
+
+/*--------------------------------------------------------------
+# Menu Section
+--------------------------------------------------------------*/
+
+.menu #menu-flters {
+  padding: 0;
+  margin: 0 auto 0 auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+}
+
+.menu #menu-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px 10px 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #948c81;
+  margin-bottom: 10px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 50px;
+  font-family: "Poppins", serif;
+}
+
+.menu #menu-flters li:hover,
+.menu #menu-flters li.filter-active {
+  color: #fff;
+  background: #ffb03b;
+}
+
+.menu #menu-flters li:last-child {
+  margin-right: 0;
+}
+
+.menu .menu-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  float: left;
+  border: 5px solid rgba(196, 35, 35, 0.1);
+}
+
+.menu .menu-content {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+
+}
+
+.menu .menu-content::after {
+  content: "......................................................................""....................................................................""....................................................................";
+  position: absolute;
+  left: 20px;
+  right: 0;
+  top: -4px;
+  z-index: 1;
+  color: #dad8d4;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.menu .menu-content a {
+  padding-right: 10px;
+  background: #fff;
+  position: relative;
+  z-index: 3;
+  font-weight: 700;
+  color: #ff9b08;
+}
+
+.menu .menu-content span {
+  background: #fff;
+  position: relative;
+  z-index: 3;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.menu .menu-ingredients {
+  font-style: italic;
+  font-size: 14px;
+  font-family: "Comic Neue", sans-serif;
+  color: #948c81;
+}
+
+.menu .menu-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.menu .menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+</style>
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a style="font-weight:bolder; font-family:'Times New Roman', Times, serif;" class="navbar-brand" href="index.html">Ming's Diner</a>
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link " href="about.html">About</a> 
+                    <a class="nav-link " href="contact.html">Contact</a>
+                    <a class="nav-link " href="order.html">Order</a> 
+            </div>   
+        </div>
+    </nav>
+    <br><br>
+    <section id="menu" class="menu section-bg">
+        <div class="container max-width-container" data-aos="fade-up">
+          <div class="section-title">
+            <h2 style="text-align: center;font-family: Satisfy, sans-serif; font-weight: bolder;">Menu</h2>
+            <p style="text-align: center; font-weight: bolder; font-size:20px ;">Check Our Tasty Menu</p>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="menu-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-drinks">Drinks</li>
+                <li data-filter=".filter-salads">Salads</li>
+                <li data-filter=".filter-specialty">Specialty</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="row menu-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="col-lg-6 menu-item filter-drinks">
+              <img
+                src="https://pastacosi.netlify.app/assets/img/menu/schweppes-tonic.jpg"
+                class="menu-img"
+                alt=""
+              />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#"> Schweppes Tonic</a><span>5.0 dt</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img
+                src="https://www.independent-birmingham.co.uk/wp-content/uploads/2021/09/unnamed-5-scaled.jpg"
+                class="menu-img"
+                alt=""
+              />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Cleopatra</a><span>32.0 dt</span>
+                </div>
+                <div class="menu-ingredients">
+                  Fillet Of Sea Bream On A Bed Of Prawns, Shrimps, Mushrooms,
+                  Basil Leaves, Zucchinis
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-drinks">
+              <img src="https://pastacosi.netlify.app/assets/img/menu/juice.jpeg" class="menu-img" alt="" />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Fresh Orange Juice</a><span>7.0 dt</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+              <img src="https://pastacosi.netlify.app/assets/img/menu/caesar.jpg" class="menu-img" alt="" />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Caesar Salad</a>
+                  <span>24.0 dt</span>
+                </div>
+                <div class="menu-ingredients">
+                  Heart of Lettuce, Cherry Tomatoes, Grilled Chicken, Parmesan.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="https://pastacosi.netlify.app/assets/img/menu/beffy.jpg" class="menu-img" alt="" />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Beffy</a><span>24.0 dt</span>
+                </div>
+                <div class="menu-ingredients">
+                  Tomato Sauce, Ground Meat, Garlic, Chili Flakes, Parsley.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-drinks">
+              <img src="https://pastacosi.netlify.app/assets/img/menu/mojito.jpg" class="menu-img" alt="" />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Mojito</a><span>8.0 dt</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+              <img
+                src="https://pastacosi.netlify.app/assets/img/menu/nut-salad.jpg"
+                class="menu-img"
+                alt=""
+              />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Nut Salad</a><span>25.0 dt</span>
+                </div>
+                <div class="menu-ingredients">
+                  Lettuce, Arugula, Cherry Tomatoes, Grilled Chicken, Goat
+                  Cheese, Nut sauce, Balsamic.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+              <img
+                src="https://pastacosi.netlify.app/assets/img/menu/burrata-salad.jpg"
+                class="menu-img"
+                alt=""
+              />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Burrata Salad</a><span>24.0 dt</span>
+                </div>
+                <div class="menu-ingredients">
+                  Burrata, Arugula, Cherry Tomatoes, Balsamic Vinegar, Virgin
+                  Olive Oil, Dried Tomatoes
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="https://pastacosi.netlify.app/assets/img/menu/juicy.jpg" class="menu-img" alt="" />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Juicy</a><span>28.0 dt</span>
+                </div>
+                <div class="menu-ingredients">
+                  Minced Meat, Fresh Tomato Sauce, Fresh Paris Marvel, Gratine
+                  With Grilled Cheese.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+              <img src="https://pastacosi.netlify.app/assets/img/menu/juicy.jpg" class="menu-img" alt="" />
+              <div class="menu-item-details">
+                <div class="menu-content">
+                  <a href="#">Juicy</a><span>28.0 dt</span>
+                </div>
+                <div class="menu-ingredients">
+                  Minced Meat, Fresh Tomato Sauce, Fresh Paris Marvel, Gratine
+                  With Grilled Cheese.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Menu Section -->
+    <footer>Thank you and visit again</footer>
+</body>
+</html>

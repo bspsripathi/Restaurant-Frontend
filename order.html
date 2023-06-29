@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        footer{
+            font-size:30px ;
+            font-family:algerian, courier;
+            background-color:darkgray;
+            text-align: center;
+            color:purple;
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  </head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <body>
+        <nav class="navbar navbar-expand navbar-dark bg-primary">
+            <a style="font-weight:bolder; font-family:'Times New Roman', Times, serif;" class="navbar-brand" href="index.html">Ming's Diner</a>
+            <div class="container-fluid">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Home</a>
+                     <a class="nav-link" href="about.html">About</a> 
+                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="order.html">Order</a>
+                </div>   
+            </div>
+        </nav>
+        <br><br>
+        
+        <div class="d-flex justify-content-center" style="font-family: 'Times New Roman', Times, serif; width: 100%;" ba">
+            <div class="w-75 p-3">
+                <div class="jumbotron jumbotron-fluid">
+                    <div>
+                        <h1 style="text-align:center; font-family:algerian, courier;" class="display-4" >Order Here</h1>
+                        <form class="w-50 mx-auto">
+                            <div class="form-group">
+                            <label for="exampleFormControlInput1">What is your name?</label>
+                            <input type="text" class="form-control" id="exa" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlSelect1">Waht would you like to order</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>Schweppes Tonic</option>
+                                <option>Burrata Salad</option>
+                                <option>Boneless Chicken in Lemon Sauce</option>
+                                <option>Seafood with curry sauce</option>
+                                <option>Tofu Special</option>
+                            </select>
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Special Requests?</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="form-group" style="text-align: center;">
+                                <button type="submit" class="btn btn-primary" onclick="myFunction2()">Enter</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function myFunction2() {
+              alert("Order Sent!");
+            }
+        </script>
+          <footer>Thank you and visit again</footer>
+    </body>
+</html>
+	
